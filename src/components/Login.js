@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import axios from 'axios';
+import loginPage from "./../img/loginPage.jpeg";
 
 function Login() {
     const navigate = useNavigate();
@@ -37,12 +38,11 @@ function Login() {
 
 
     return(
-        <div className="login">
-            <div>
+        <div style={{ backgroundImage:`url(${loginPage})` }} className="login">
 
             <h1 class="text-2xl font-bold pt-20 pb-5">Login</h1>
 
-            <form class="" action="POST">
+            <form action="POST">
                 <div class=" pt-2">
                 <input type="email" placeholder="Email" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  p-2.5 dark:bg-white-100 dark:border-gray-600 dark:placeholder-gray-500 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 onChange={(e)=>{setEmail(e.target.value)}}/>                                                                                                     
@@ -59,9 +59,6 @@ function Login() {
             <br/>
             <h6 class="text-sm">Do not have an account? | <Link class="font-medium text-blue-600 dark:text-blue-500 hover:underline" to="/register">Register</Link></h6>
    
-
-            
-            </div>
 
         </div>
     )

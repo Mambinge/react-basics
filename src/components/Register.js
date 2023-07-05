@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import React, {useState} from "react";
+import loginPage from "./../img/loginPage.jpeg";
 
 
 function Register() {
@@ -36,7 +37,7 @@ function Register() {
     }
 
     return(
-        <div className="Register">
+        <div style={{ backgroundImage:`url(${loginPage})` }} className="Register">
 
             <h1 class="text-2xl font-bold pt-20 pb-5">Register</h1>
 
